@@ -1,0 +1,193 @@
+header {
+    background-color: var(--cinza-escuro);
+}
+
+/*CABECALHO CIMA*/
+
+.cabecalho-cima {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: .5rem 1rem 0.5rem 1rem;
+}
+
+.cabecalho-cima .fa-whatsapp {
+    font-size: 1.3rem;
+    padding-right: .5rem;
+    color: var(--cinza-azulado);
+}
+
+.cabecalho-cima .fa-instagram {
+    font-size: 1.3rem;
+    color: var(--cinza-azulado);
+}
+
+.container-email {
+    display: flex;
+    align-items: center;
+}
+
+.fa-envelope {
+    font-size: 1.3rem;
+    color: var(--cinza-azulado);
+    margin-right: .5rem;
+}
+
+
+.nome-email {
+    font-size: .8rem;
+    color: var(--cinza-azulado);
+    text-decoration: underline;
+}
+
+/*CABECALHO BAIXO*/
+
+.cabecalho-baixo {
+    display: flex;
+    align-items: center;
+}
+
+.container-img {
+    width: 40%;
+    height: 90%;
+    text-align: center;
+}
+
+.cabecalho-logo {
+    width: 50%;
+    margin-left: 5rem;
+}
+
+.container-titulo {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.cabecalho-titulo {
+    font-weight: 600;
+    color: var(--branco);
+    font-size: 3rem;
+}
+
+.cabecalho-subtitulo {
+    font-size: 1.5rem;
+    background-color: var(--cinza-claro);
+    border: 1px solid var(--cinza-claro);
+    border-radius: .5rem;
+    padding: .3rem .5rem;
+}
+
+/*MENU NAVEGACAO*/
+
+.menu-estatico {
+    background-color: var(--cinza-claro);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista-menu {
+    display: flex;
+    gap: 5rem;
+}
+
+.lista-menu a {
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.lista-menu2{
+    position: absolute;
+    display: none;
+    padding-top: .5rem;
+}
+
+.lista-menu2__link {
+    display: block;
+    padding: .5rem 0;
+    background-color: var(--cinza-claro);
+}
+
+.lista-dropdown:hover .lista-menu2 {
+    display: block;
+}
+
+.lista-menu a:hover {
+    background-color: var(--branco);
+    transition: .25s;
+}
+
+/* Efeitos */
+.cabecalho-cima .fa-whatsapp:hover, .cabecalho-cima .fa-instagram:hover, .cabecalho-cima .fa-envelope:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+.cabecalho-logo:hover, .container-titulo:hover {
+    opacity: .8;
+    transition: .3s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    .cabecalho-baixo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cabecalho-logo { 
+        text-align: center;
+        width: 200px;
+        margin: 0px;
+    }
+
+    .cabecalho-titulo {
+        font-weight: 600;
+        color: var(--branco);
+        font-size: 2rem;
+    }
+
+    .cabecalho-subtitulo {
+        font-size: 1.5rem;
+        background-color: var(--cinza-claro);
+        border: 1px solid var(--cinza-claro);
+        border-radius: .5rem;
+        padding: .3rem .5rem;
+        margin-bottom: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 620px) {
+    .cabecalho-baixo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-img {
+        width: 200px;
+    }
+
+    .cabecalho-logo {
+        margin: 0px;
+        width: 100%;
+    }
+    .cabecalho-titulo {
+        font-size: 1.6rem;
+    }
+    .cabecalho-subtitulo {
+        font-size: 1.1rem;
+    }
+    .lista-menu{
+        gap: 1rem
+    }
+
+    .lista-menu a {
+        font-size: 1rem;
+    }
+}

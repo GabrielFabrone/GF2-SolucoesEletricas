@@ -1,0 +1,211 @@
+.rodape {
+    background-color: var(--cinza-escuro);
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--branco);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+    margin-left: 5rem;
+}
+
+.rodape h2 {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--branco);
+   padding: 1rem 0 0 0;
+}
+
+.rodape .container p {
+    font-size: 1rem;
+    background-color: var(--cinza-claro);
+    border: 1px solid var(--cinza-claro);
+    border-radius: .5rem;
+    padding: .1rem .3rem;
+}
+
+.container-celular {
+    display: flex;
+    column-gap: 4rem
+}
+
+.rodape-redes, .rodape-redes2{
+    padding: 2rem 0;
+}
+
+.link-redes {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.link-redes p {
+    padding-left: .5rem;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contato-celular {
+    display: none;
+}
+
+.contato h3 {
+    align-self: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+}
+
+.contato p {
+    padding-bottom: .5rem;
+}
+
+.contato input {
+    background-color: var(--cinza-claro);
+    padding: .5rem 3rem;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+}
+
+.contato input::placeholder {
+    text-align: center;
+    color: var(--branco);
+}
+
+.contato button {
+    background-color: var(--cinza-azulado);
+    display: inline;
+    width: 150px;
+    align-self: center;
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.email {
+    padding: 0 2rem;
+}
+
+/* EFEITOS */
+.link-redes p:hover {
+    text-decoration: underline;
+}
+
+.container:hover {
+    opacity: 0.8;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.contato button:hover, .contato-celular button:hover {
+    background-color: var(--branco);
+    color: var(--cinza-azulado)
+}
+
+@media screen and (max-width: 1100px) {
+    .rodape {
+        display: block;
+    }
+
+    .container {
+        margin: 0px 0px 1rem 0px;
+    }
+
+    .container-celular {
+        display: flex;
+        column-gap: 1rem;
+        justify-content: space-evenly;
+    }
+
+    .contato-celular {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .contato-celular h3 {
+        align-self: center;
+        font-weight: 600;
+        font-size: 1rem;
+        padding-bottom: .5rem;
+    }
+    
+    .contato-celular p {
+        font-size: 0.8rem;
+        padding-bottom: .5rem;
+    }
+    
+    .contato-celular input {
+        background-color: var(--cinza-claro);
+        padding: .3rem 2rem;
+        border-radius: .5rem;
+        margin-bottom: .5rem;
+    }
+    
+    .contato-celular input::placeholder {
+        text-align: center;
+        color: var(--branco);
+        font-size: .9rem;
+    }
+    
+    .contato-celular button {
+        background-color: var(--cinza-azulado);
+        display: inline;
+        width: 150px;
+        align-self: center;
+        padding: .1rem .5rem;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+
+    .contato {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .rodape {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-celular {
+        column-gap: 1rem
+    }
+
+    .contato-celular {
+        display: none;
+    }
+    .contato {
+        display: flex;
+        width: 320px;
+        justify-content: center;
+    }
+    .contato h3 {
+        font-size: 1rem;
+    }
+    .contato p {
+        font-size: .8rem;
+        text-align: center;
+    }
+    .contato input {
+        padding: .2rem 2rem;
+    }
+    .contato button {
+        padding: .075rem .5rem;
+        margin-bottom: 2rem;
+    }
+    .link-redes p {
+        font-size: 0.8rem;
+    }
+}
